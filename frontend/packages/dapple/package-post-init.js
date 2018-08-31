@@ -47,13 +47,13 @@ Dapple.getTokens = () => ['W-ETH', 'BITW', 'CCTRL'];
 Dapple.generatePairs = () => {
   const TradingPairs = [
     {
-      quote: 'BITW',
-      base: 'W-ETH',
+      base: 'BITW',
+      quote: 'W-ETH',
       priority: 10,
     },
     {
-      base: 'W-ETH',
-      quote: 'CCTRL',
+      base: 'CCTRL',
+      quote: 'W-ETH',
       priority: 9,
     },
   ];
