@@ -34,54 +34,28 @@ const tokens = config.tokens;
 const tokenSpecs = {
   'OW-ETH': { precision: 18, format: '0,0.00[0000000000000000]' },
   'W-ETH': { precision: 18, format: '0,0.00[0000000000000000]' },
-  INRD: { precision: 18, format: '0,0.00[0000000000000000]' },
-  SAI: { precision: 18, format: '0,0.00[0000000000000000]' },
-  MAHA: { precision: 18, format: '0,0.00[0000000000000000]' },
-  DGD: { precision: 9, format: '0,0.00[0000000]' },
-  GNT: { precision: 18, format: '0,0.00[0000000000000000]' },
-  'W-GNT': { precision: 18, format: '0,0.00[0000000000000000]' },
-  REP: { precision: 18, format: '0,0.00[0000000000000000]' },
-  ICN: { precision: 18, format: '0,0.00[0000000000000000]' },
-  '1ST': { precision: 18, format: '0,0.00[0000000000000000]' },
-  SNGLS: { precision: 0, format: '0,0' },
-  VSL: { precision: 18, format: '0,0.00[0000000000000000]' },
-  PLU: { precision: 18, format: '0,0.00[0000000000000000]' },
-  MLN: { precision: 18, format: '0,0.00[0000000000000000]' },
-  RHOC: { precision: 8, format: '0,0.00[000000]' },
-  TIME: { precision: 8, format: '0,0.00[000000]' },
-  GUP: { precision: 3, format: '0,0.00[0]' },
-  BAT: { precision: 18, format: '0,0.00[0000000000000000]' },
-  NMR: { precision: 18, format: '0,0.00[0000000000000000]' },
+  BITW: { precision: 18, format: '0,0.00[0000000000000000]' },
+  CCTRL: { precision: 18, format: '0,0.00[0000000000000000]' }
 };
 
 Dapple.getQuoteTokens = () => ['W-ETH'];
 
 Dapple.getBaseTokens = () => [];
 
-Dapple.getTokens = () => ['W-ETH', 'MAHA', 'INRD'];
+Dapple.getTokens = () => ['W-ETH', 'BITW', 'CCTRL'];
 
 Dapple.generatePairs = () => {
   const TradingPairs = [
     {
-      base: 'MAHA',
-      quote: 'W-ETH',
+      quote: 'BITW',
+      base: 'W-ETH',
       priority: 10,
     },
     {
       base: 'W-ETH',
-      quote: 'INRD',
+      quote: 'CCTRL',
       priority: 9,
     },
-    {
-      base: 'MAHA',
-      quote: 'INRD',
-      priority: 8,
-    },
-    // {
-    //   base: 'SAI',
-    //   quote: 'INRD',
-    //   priority: 7,
-    // },
   ];
 
   return TradingPairs;
