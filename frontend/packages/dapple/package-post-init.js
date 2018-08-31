@@ -38,11 +38,11 @@ const tokenSpecs = {
   CCTRL: { precision: 18, format: '0,0.00[0000000000000000]' }
 };
 
-Dapple.getQuoteTokens = () => ['W-ETH'];
+Dapple.getQuoteTokens = () => ['W-ETH', 'TUSD'];
 
 Dapple.getBaseTokens = () => [];
 
-Dapple.getTokens = () => ['W-ETH', 'BITW', 'CCTRL'];
+Dapple.getTokens = () => ['W-ETH', 'BITW', 'TUSD', 'CCTRL'];
 
 Dapple.generatePairs = () => {
   const TradingPairs = [
@@ -54,6 +54,16 @@ Dapple.generatePairs = () => {
     {
       base: 'CCTRL',
       quote: 'W-ETH',
+      priority: 9,
+    },
+    {
+      base: 'BITW',
+      quote: 'TUSD',
+      priority: 10,
+    },
+    {
+      base: 'CCTRL',
+      quote: 'TUSD',
       priority: 9,
     },
   ];
